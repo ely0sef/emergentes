@@ -9,14 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="16dp">
+        android:layout_margin="16dp">
 
         <TextView
             android:id="@+id/text_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bienvenido a la app de control de calidad de agua Hola"
+            android:text="Bienvenido a la app de control de calidad de agua"
             android:textSize="20sp" />
 
         <LinearLayout
@@ -64,8 +63,6 @@
             android:text="PPM recomendados"
             android:textSize="16sp"
             android:layout_marginTop="8dp" />
-
-
 
     </LinearLayout>
 
