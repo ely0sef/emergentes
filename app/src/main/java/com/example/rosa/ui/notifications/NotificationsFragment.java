@@ -35,7 +35,7 @@ public class NotificationsFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_notifications, container, false);
-        txtTemp = root.findViewById(R.id.edit_max_temperature);
+        txtTemp = root.findViewById(R.id.txtTemp);
         handler = new Handler(Looper.getMainLooper());
 
         connectToDevice();
@@ -88,7 +88,7 @@ public class NotificationsFragment extends Fragment {
             handler.post(new Runnable() {
                 public void run() {
                     Log.i("DeviceClient", "Mensaje recibido: " + messageData);
-                    txtTemp.setText(messageData);
+                    txtTemp.setText(messageData + "°C grados");
                 }
             });
 

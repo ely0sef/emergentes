@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Rosa</string>
     <string name="title_principal">Principal</string>
-    <string name="title_sensor1">Sensor1</string>
-    <string name="title_sensor2">Sensor2</string>
-    <string name="title_sensor3">Sensor2</string>
+    <string name="title_sensor1">Sensor PH</string>
+    <string name="title_sensor2">Temperatura</string>
+    <string name="title_sensor3">Sensor TDS/PPM</string>
 </resources>
