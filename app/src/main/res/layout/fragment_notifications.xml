@@ -44,6 +44,14 @@
             android:layout_marginTop="16dp"
             android:backgroundTint="@color/purple_500" />
 
+        <EditText
+            android:id="@+id/txtTemp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Temperatura actual"
+            android:inputType="number"
+            android:layout_marginTop="8dp"
+            />
     </LinearLayout>
 
     <!-- Resto del diseño original -->
