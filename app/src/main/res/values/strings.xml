@@ -4,4 +4,6 @@
     <string name="title_sensor1">Sensor1</string>
     <string name="title_sensor2">Sensor2</string>
     <string name="title_sensor3">Sensor2</string>
+    <string name="channel_name">Nombre del canal</string>
+    <string name="channel_description">Descripción del canal</string>
 </resources>
