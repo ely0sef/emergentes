@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.rosa.R;
-import com.example.rosa.databinding.FragmentNotificationsBinding;
+
 import com.example.rosa.databinding.FragmentSensor3Binding;
 import com.microsoft.azure.sdk.iot.device.DeviceClient;
 import com.microsoft.azure.sdk.iot.device.IotHubClientProtocol;
@@ -77,7 +77,6 @@ public class Sensor3Fragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        binding = null;
         if (deviceClient != null) {
             try {
                 deviceClient.closeNow();
@@ -85,6 +84,7 @@ public class Sensor3Fragment extends Fragment {
                 throw new RuntimeException(e);
             }
         }
+        binding = null;
     }
     private class MessageCallback implements com.microsoft.azure.sdk.iot.device.MessageCallback {
         public IotHubMessageResult execute(Message msg, Object context) {
@@ -94,6 +94,11 @@ public class Sensor3Fragment extends Fragment {
                 public void run() {
                     Log.i("DeviceClient", "Mensaje recibido: " + messageData);
                     txtTemp.setText(messageData + " ppm");
+                    try {
+                        deviceClient.closeNow();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
             });
 

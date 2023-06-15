@@ -89,6 +89,12 @@ public class NotificationsFragment extends Fragment {
                 public void run() {
                     Log.i("DeviceClient", "Mensaje recibido: " + messageData);
                     txtTemp.setText(messageData + "°C grados");
+
+                    try {
+                        deviceClient.closeNow();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
             });
 

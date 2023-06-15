@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 showFakeNotification();
             }
-        }, 0, 15000);
+        }, 0, 60000);
     }
 
     @Override
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_notifications_black_24dp)
                 .setContentTitle("Cuidado")
-                .setContentText("Está demasiado caliente. ¡Nemo morirá!")
+                .setContentText("La temperatura supero los 25 grados")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setAutoCancel(true); // Agregar esta línea para que la notificación se cierre automáticamente al hacer clic en ella
 
